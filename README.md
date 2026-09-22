@@ -39,7 +39,7 @@ This repository implements an end-to-end time-series pipeline to test this premi
 
 ---
 
-## 📊 Empirical Results & Key Findings
+## Empirical Results & Key Findings
 
 Models were evaluated out-of-sample using **Normalized Root Mean Squared Error (NRMSE)** and **Directional Accuracy**:
 
@@ -74,3 +74,13 @@ cd dl-equity-trend-predictor
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+In the initial data-loading cells of `random_forest.ipynb` or `lstm_model_final.ipynb`, specify the target equity dataset by updating the following variables:
+
+```bash
+title = "Enter Title for relevant company here" #(optional, purelycosmetic)
+data = pd.read_csv("data/{enter csv file name here}.csv")
+```
+
+Finally, execute the cells in `random_forest.ipynb` and `lstm_model_final.ipynb` sequentially using Jupyter Notebook or the VS Code interactive runner to reproduce the benchmarks and plots.
